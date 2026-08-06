@@ -30,8 +30,8 @@ const Banner = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="/Golam Kibria Resume.pdf"
-                download="Golam Kibria Resume.pdf"
+                href="/golam-kibria-resume.pdf"
+                download="golam-kibria-resume.pdf"
                 className="btn btn-secondary"
               >
                 Download Resume
