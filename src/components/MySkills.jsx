@@ -4,8 +4,7 @@ import { DiNodejs } from "react-icons/di";
 import { SiMongodb, SiExpress, SiFirebase, SiTypescript, SiPostgresql, SiPrisma, SiDocker, SiNginx, SiJsonwebtokens, SiOpenai } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 
-// Add `learning: true` to any skill you're still learning — it'll show a "Learning" badge.
-// Once you're confident with it, just remove that flag (or delete the line).
+
 const skillCategories = [
     {
         title: "Frontend",
@@ -14,9 +13,9 @@ const skillCategories = [
             { icon: <FaCss3Alt className="text-4xl" />, name: "CSS3" },
             { icon: <RiTailwindCssFill className="text-4xl" />, name: "Tailwind CSS" },
             { icon: <IoLogoJavascript className="text-4xl" />, name: "JavaScript" },
-            { icon: <SiTypescript className="text-4xl" />, name: "TypeScript", learning: true },
+            { icon: <SiTypescript className="text-4xl" />, name: "TypeScript" },
             { icon: <RiReactjsLine className="text-4xl" />, name: "React.js" },
-            { icon: <RiNextjsFill className="text-4xl" />, name: "Next.js", learning: true },
+            { icon: <RiNextjsFill className="text-4xl" />, name: "Next.js" },
         ]
     },
     {
@@ -30,8 +29,8 @@ const skillCategories = [
         title: "Database",
         skills: [
             { icon: <SiMongodb className="text-4xl" />, name: "MongoDB" },
-            { icon: <SiPostgresql className="text-4xl" />, name: "PostgreSQL", learning: true },
-            { icon: <SiPrisma className="text-4xl" />, name: "Prisma ORM", learning: true },
+            { icon: <SiPostgresql className="text-4xl" />, name: "PostgreSQL" },
+            { icon: <SiPrisma className="text-4xl" />, name: "Prisma ORM" },
         ]
     },
     {
@@ -51,7 +50,7 @@ const skillCategories = [
 const MySkills = () => {
     return (
         <div className="my-20 max-w-7xl mx-auto px-5">
-            <h3 id="skills" className="text-3xl text-white font-bold text-center mb-10">Technical Skills</h3>
+            <h3 id="skills" className="text-3xl font-bold text-center mb-10">Technical Skills</h3>
 
             <div className="space-y-10">
                 {

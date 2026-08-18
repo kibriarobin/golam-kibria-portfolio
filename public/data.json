@@ -1,14 +1,14 @@
 [
   {
     "_id": 1,
-    "name": "Study Hive (Educational Platform)",
-    "description": "Study Hive is an innovative educational platform designed to facilitate online learning. It offers a variety of courses, interactive tutorials, and collaborative tools to enhance the learning experience for students and educators alike.",
-    "Live": "https://study-hive-388ef.web.app",
-    "clientLink": "https://github.com/kibriarobin97/study-hive-client",
-    "photo": "https://i.ibb.co/KD379fV/kelly-sikkema-Yn-RNd-B-XTME-unsplash.jpg",
-    "technology": "Tailwind, React.js, Node.js, Express.js, MongoDB, Stripe, Firebase",
-    "challenges": "Integrating the Stripe payment method to build a secure course purchase flow was a key challenge, especially ensuring users were correctly enrolled after a successful payment. Managing data access control for multiple user roles (student/teacher/admin) was also fairly complex.",
-    "futurePlans": "Planning to add video-based lecture streaming and an analytics dashboard for instructors. Also want to add a real-time chat/discussion feature to make student-instructor communication easier."
+    "name": "Adventure Aegis (Tourist Service)",
+    "description": "Adventure Aegis is a premier tourist service platform offering personalized travel experiences across Southeast Asia. It features a responsive navbar, an attractive slider, and detailed information on curated destinations. With secure Firebase Authentication, users can add their favorite places and view, update, or delete their added list — ensuring a smooth, hassle-free experience for every traveler. The site is fully responsive across mobile and tablet devices.",
+    "Live": "https://adventure-aegis.web.app",
+    "clientLink": "https://github.com/kibriarobin97/adventure-aegis-client",
+    "photo": "https://i.ibb.co/thhvHHv/gabriella-clare-marino-oc-KTWPb-Vc2-U-unsplash.jpg",
+    "technology": "Tailwind, React.js, Node.js, Express.js, MongoDB, Firebase",
+    "challenges": "Building a secure login system with Firebase Authentication and protected routes — so only logged-in users could add, update, or delete a place — was a key challenge. Implementing user-specific CRUD logic, ensuring each user could only view and manage their own added places, was also important to get right.",
+    "futurePlans": "Planning to add a review/rating system, online booking with payment integration, and advanced search/filtering by place category. Also want to add a feature allowing users to build their own custom travel itinerary in the future."
   },
   {
     "_id": 2,
@@ -23,13 +23,35 @@
   },
   {
     "_id": 3,
-    "name": "Adventure Aegis (Tourist Service)",
-    "description": "Adventure Aegis is a premier tourist service platform offering personalized travel experiences across Southeast Asia. It features a responsive navbar, an attractive slider, and detailed information on curated destinations. With secure Firebase Authentication, users can add their favorite places and view, update, or delete their added list — ensuring a smooth, hassle-free experience for every traveler. The site is fully responsive across mobile and tablet devices.",
-    "Live": "https://adventure-aegis.web.app",
-    "clientLink": "https://github.com/kibriarobin97/adventure-aegis-client",
-    "photo": "https://i.ibb.co/thhvHHv/gabriella-clare-marino-oc-KTWPb-Vc2-U-unsplash.jpg",
-    "technology": "Tailwind, React.js, Node.js, Express.js, MongoDB, Firebase",
-    "challenges": "Building a secure login system with Firebase Authentication and protected routes — so only logged-in users could add, update, or delete a place — was a key challenge. Implementing user-specific CRUD logic, ensuring each user could only view and manage their own added places, was also important to get right.",
-    "futurePlans": "Planning to add a review/rating system, online booking with payment integration, and advanced search/filtering by place category. Also want to add a feature allowing users to build their own custom travel itinerary in the future."
-  }
+    "name": "Study Hive (Educational Platform)",
+    "description": "Study Hive is an innovative educational platform designed to facilitate online learning. It offers a variety of courses, interactive tutorials, and collaborative tools to enhance the learning experience for students and educators alike.",
+    "Live": "https://study-hive-388ef.web.app",
+    "clientLink": "https://github.com/kibriarobin97/study-hive-client",
+    "photo": "https://i.ibb.co/KD379fV/kelly-sikkema-Yn-RNd-B-XTME-unsplash.jpg",
+    "technology": "Tailwind, React.js, Node.js, Express.js, MongoDB, Stripe, Firebase",
+    "challenges": "Integrating the Stripe payment method to build a secure course purchase flow was a key challenge, especially ensuring users were correctly enrolled after a successful payment. Managing data access control for multiple user roles (student/teacher/admin) was also fairly complex.",
+    "futurePlans": "Planning to add video-based lecture streaming and an analytics dashboard for instructors. Also want to add a real-time chat/discussion feature to make student-instructor communication easier."
+  },
+  {
+    "_id": 4,
+    "name": "GearUp (Sports & Outdoor Gear Rental Platform)",
+    "description": "GearUp is a full-stack sports and outdoor gear rental platform where customers can browse and rent equipment, providers can list and manage their gear, and admins oversee the entire marketplace. It features role-based dashboards for Provider, Admin, and Customer, secure JWT authentication with silent token refresh, and integrated online payments via SSLCommerz.",
+    "Live": "https://gearup-frontend-amber.vercel.app",
+    "clientLink": "https://github.com/kibriarobin/gearup-frontend",
+    "photo": "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "technology": "Next.js 16, TypeScript, Tailwind CSS v4, shadcn/ui, Node.js, Express.js, Prisma ORM, PostgreSQL, JWT, SSLCommerz",
+    "challenges": "Implementing role-based dashboards (Provider, Admin, Customer) with proper access control was a major challenge, as each role needed a distinct set of permissions and views. Setting up JWT authentication with a silent refresh token flow through custom Next.js middleware (proxy.ts) required careful handling to keep users logged in seamlessly without security gaps. Integrating SSLCommerz for payments and managing atomic stock updates (to prevent overbooking the same item) also required precise backend logic.",
+    "futurePlans": "Planning to add a review and rating system for rental items, real-time notifications for booking status updates, and an analytics dashboard for providers to track their rental performance. Also want to add a wishlist/favorites feature for customers."
+  },
+  {
+  "_id": 5,
+  "name": "JobNest (Bangladesh-focused Job Portal)",
+  "description": "JobNest is a full-stack job portal tailored for the Bangladesh job market, connecting candidates with employers through a streamlined application process. It features three distinct role-based dashboards for Candidates, Employers, and Admins, secure authentication with Google OAuth alongside traditional login, and a clean, modern interface built with Next.js 16.",
+  "Live": "https://jobnest-frontend-three.vercel.app",
+  "clientLink": "https://github.com/kibriarobin/jobnest-frontend",
+  "photo": "https://images.unsplash.com/photo-1758518730264-9235a1e5416b?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "technology": "Next.js 16, TypeScript, Tailwind CSS, shadcn/ui, Node.js, Express.js, Prisma ORM, PostgreSQL, JWT, Passport.js (Google OAuth), EmailJS",
+  "challenges": "Implementing Google OAuth login with Passport.js while keeping authentication cookies working correctly across different domains (frontend and backend hosted separately) was a significant challenge — this required a custom workaround passing tokens through URL query parameters after redirect. Designing a modular route-controller-service-validation architecture on the backend, and managing three separate role-based dashboards (Candidate, Employer, Admin) with distinct permissions and views on the frontend, also required careful planning.",
+  "futurePlans": "Planning to add a resume builder tool, real-time application status notifications, and an AI-powered job matching/recommendation feature. Also want to add a messaging system between candidates and employers, and analytics for employers to track their job posting performance."
+}
 ]
