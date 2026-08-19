@@ -1,44 +1,158 @@
-import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaGithubSquare,
+} from "react-icons/fa";
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-    return (
-        <footer className="bg-gray-800 text-gray-50">
-            <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row divide-gray-400">
-                <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
-                    <li><Link to='/#about'>About</Link></li>
-                    <li><Link to='/#skills'>Skills</Link></li>
-                    <li><Link to='/#projects'>Projects</Link></li>
-                    <li><Link to='/#contact'>Contact</Link></li>
-                </ul>
-                <div className="flex flex-col justify-center items-center pt-6 lg:pt-0">
-                    <div className="uppercase text-gray-50 mb-5 font-semibold">Follow On</div>
-                    <div className="flex justify-start space-x-3">
-                        <a rel="noopener noreferrer" href="https://www.facebook.com/kibriarobin1" title="Facebook" target="blank" className="flex items-center p-1">
-                            <FaFacebookSquare className="text-gray-50 text-xl"/>
-                        </a>
-                        <a rel="noopener noreferrer" href="https://twitter.com/KibriaRobin1" title="Twitter" target="blank" className="flex items-center p-1">
-                            <FaXTwitter className="text-gray-50 text-xl"/>
-                        </a>
-                        <a rel="noopener noreferrer" href="https://www.instagram.com/kibria.robin" title="Instagram" target="blank" className="flex items-center p-1">
-                        <FaInstagramSquare className="text-white text-xl"/>
-                        </a>
-                        <a rel="noopener noreferrer" href="https://www.threads.com/@kibria.robin" title="Threads" target="blank" className="flex items-center p-1">
-                        <FaThreads className="text-white text-xl"/>
-                        </a>
-                        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/golam-kibria97" title="Linkedin" target="blank" className="flex items-center p-1">
-                        <FaLinkedin className="text-white text-xl"/>
-                        </a>
-                        <a rel="noopener noreferrer" href="https://github.com/kibriarobin" title="GitHub" target="blank" className="flex items-center p-1">
-                        <FaGithubSquare className="text-white text-xl"/>
-                        </a>
-                    </div>
-                </div>
+  const socialLinks = [
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/kibriarobin1",
+      icon: <FaFacebookSquare />,
+    },
+    {
+      name: "X",
+      url: "https://twitter.com/KibriaRobin1",
+      icon: <FaXTwitter />,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/kibria.robin",
+      icon: <FaInstagramSquare />,
+    },
+    {
+      name: "Threads",
+      url: "https://www.threads.com/@kibria.robin",
+      icon: <FaThreads />,
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/golam-kibria97",
+      icon: <FaLinkedin />,
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/kibriarobin",
+      icon: <FaGithubSquare />,
+    },
+  ];
+
+  const navLinks = [
+    { name: "About", path: "/#about" },
+    { name: "Skills", path: "/#skills" },
+    { name: "Projects", path: "/#projects" },
+    { name: "Education", path: "/#education" },
+    { name: "Contact", path: "/#contact" },
+  ];
+
+  return (
+    <footer className="relative mt-10 border-t border-white/10 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute left-1/2 -translate-x-1/2 -top-32 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto px-5 py-12">
+        {/* Main Footer */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <Link
+              to="/"
+              className="
+                text-2xl
+                font-bold
+                text-white
+                transition-colors
+                hover:text-blue-400
+              "
+            >
+              Golam{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Kibria
+              </span>
+            </Link>
+
+            <p className="mt-2 text-sm opacity-50">Full Stack Developer</p>
+          </div>
+
+          {/* Navigation */}
+          <nav>
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="
+                      text-sm
+                      opacity-60
+                      transition-all duration-300
+                      hover:text-blue-400
+                      hover:opacity-100
+                    "
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Social */}
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] opacity-40 mb-4">
+              Connect With Me
+            </p>
+
+            <div className="flex items-center justify-center gap-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={social.name}
+                  aria-label={social.name}
+                  className="
+                    w-9 h-9
+                    flex items-center justify-center
+                    rounded-lg
+                    border border-white/10
+                    bg-white/[0.03]
+                    text-lg
+                    opacity-60
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:border-blue-400/40
+                    hover:bg-blue-400/10
+                    hover:text-blue-400
+                    hover:opacity-100
+                  "
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
-            <div className="py-6 text-sm text-center text-gray-400">© All Rights Reserved by Golam Kibria</div>
-        </footer>
-    );
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="my-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs opacity-40">
+          <p>© {new Date().getFullYear()} Golam Kibria. All rights reserved.</p>
+
+          <p>
+            Designed & Built with <span className="text-blue-400">React</span> &{" "}
+            <span className="text-cyan-400">Tailwind CSS</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
