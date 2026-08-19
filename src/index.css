@@ -7,3 +7,14 @@
 :root {
   font-family: "Poppins", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #020617;
+  color: white;
+}
