@@ -18,3 +18,17 @@ body {
   background-color: #020617;
   color: white;
 }
+
+@keyframes skillSlide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-skill-slide {
+  animation: skillSlide 30s linear infinite;
+}
